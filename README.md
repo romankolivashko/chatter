@@ -9,6 +9,11 @@ https://www.youtube.com/watch?v=NU-HfZY3ATQ
 * 12:00: Setting up rough POC 
 * 13:00: Look into FB Messanger clone project
 https://www.youtube.com/watch?v=KB7JEnfc7Dc
+* 14:30: Node.js Authentication research
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+* 16:00: CSS BEM methodology adoption
+https://css-tricks.com/bem-101/
+
 
 Instructor comments:
 ====================
