@@ -7,6 +7,8 @@
 https://www.youtube.com/watch?v=NU-HfZY3ATQ
 
 * 12:00: Setting up rough POC 
+* 13:00: Look into FB Messanger clone project
+https://www.youtube.com/watch?v=KB7JEnfc7Dc
 
 Instructor comments:
 ====================
