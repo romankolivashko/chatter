@@ -6,7 +6,7 @@
 * 11:00 : Research real time chat app projects- with Socket.io, Node.js
 https://www.youtube.com/watch?v=NU-HfZY3ATQ
 
-
+* 12:00: Setting up rough POC 
 
 Instructor comments:
 ====================
