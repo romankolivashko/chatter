@@ -1,10 +1,10 @@
-import React from 'react'
-import { ChannelList, useChatContext } from 'stream-chat-react';
-import Cookies from 'universal-cookie';
+import React from "react";
+import { ChannelList, useChatContext } from "stream-chat-react";
+import Cookies from "universal-cookie";
 
-import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
-import LogoIcon from '../assets/logo.png'
-import LogOutIcon from '../assets/logout.png'
+import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "./";
+import LogoIcon from "../assets/logo.png";
+import LogOutIcon from "../assets/logout.png";
 
 const SideBar = () => (
   <div className="channel-list__sidebar">
@@ -19,16 +19,13 @@ const SideBar = () => (
       </div>
     </div>
   </div>
-)
-
+);
 
 const CompanyHeader = () => (
-    <div className="channel-list__header">
-      <p className="channel-list__header__text">
-        Hot Topic
-      </p>
-    </div> 
-)
+  <div className="channel-list__header">
+    <p className="channel-list__header__text">Hot Topic</p>
+  </div>
+);
 
 const ChannelListContainer = () => {
   return (
@@ -36,9 +33,27 @@ const ChannelListContainer = () => {
       <SideBar />
       <div className="channel-list__list__wrapper">
         <CompanyHeader />
+        <ChannelSearch />
+        <ChannelList
+          filters={{}}
+          channelRenderFilterFn={() => {}}
+          List={(listProps) => <TeamChannelList {...listProps} type="team" />}
+          Preview={(previewProps) => (
+            <TeamChannelPreview {...previewProps} type="team" />
+          )}
+        />
+
+        <ChannelList
+          filters={{}}
+          channelRenderFilterFn={() => {}}
+          List={(listProps) => <TeamChannelList {...listProps} type="messaging" />}
+          Preview={(previewProps) => (
+            <TeamChannelPreview {...previewProps} type="messaging" />
+          )}
+        />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ChannelListContainer
+export default ChannelListContainer;
