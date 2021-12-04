@@ -20,7 +20,7 @@ https://getstream.io/chat/docs/sdk/react/
 
 * 16:00: MongoDB research for Auth
 
-Instructor comments:
+Instructor's comments:
 ====================
 1.	React vs React Native?
 o	I see that you said you'd be building it with React, but you also mention being able to receive and send text messages 
