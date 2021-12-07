@@ -1,3 +1,13 @@
+### Here is my project idea:
+Probably beat to death, but I’m very interested in implementation of a chat messaging app.
+The message transport will be handled by external messaging API (integration of which is the area of interest). 
+As MVP, users should be able to send and receive text messages.
+The app will be built with React.
+Have not decided on db flavor yet, but will most likely have a database to store historical data and to store user auth data. 
+To build upon, nice styling and extra messaging functionality could be a stretch goal.
+
+
+
 ### Research & Planning Log
 #### Friday, 12/03
 * 8:20: prioritize to-dos
