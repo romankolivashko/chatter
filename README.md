@@ -30,6 +30,9 @@ https://getstream.io/chat/docs/sdk/react/
 
 * 16:00: MongoDB research for Auth
 
+#### Friday, 12/10
+* 8:18: picked up from last week, Node Auth and Stream conn good to go
+
 Instructor's comments:
 ====================
 1.	React vs React Native?
