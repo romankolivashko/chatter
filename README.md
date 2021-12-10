@@ -32,6 +32,9 @@ https://getstream.io/chat/docs/sdk/react/
 
 #### Friday, 12/10
 * 8:18: picked up from last week, Node Auth and Stream conn good to go
+* 9:09: Stream React UI Components research and implementation
+https://getstream.io/chat/docs/sdk/react/message-components/ui-components/
+
 
 Instructor's comments:
 ====================
