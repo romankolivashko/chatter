@@ -39,6 +39,8 @@ http://getbem.com/naming/
 https://9elements.com/bem-cheat-sheet/
 * 11:00: Research How to use SVGs in React
 https://blog.logrocket.com/how-to-use-svgs-in-react/
+* 12:25: Implementing Chat UI Creation based on official Stream docs
+https://getstream.io/chat/docs/
 
 
 Instructor's comments:

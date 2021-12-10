@@ -1,5 +1,4 @@
 import React from 'react'
-// import AddChannel from './add_channel_icon.svg';
 
 export const AddChannel = ( { setCreateType, setIsCreating, setIsEditing, setToggleContainer, type }) => (
     <svg 

@@ -29,7 +29,7 @@ const CompanyHeader = () => (
   </div>
 );
 
-const ChannelListContainer = ({ isCreating, setIsCreating, setIsCreatingType, setIsEditing }) => {
+const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsEditing }) => {
   const logout = () => {
     cookies.remove("token");
     cookies.remove('userId');
@@ -57,7 +57,7 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setIsCreatingType, se
                 type="team" 
                 isCreating={isCreating}
                 setIsCreating={setIsCreating} 
-                setIsCreatingType={setIsCreatingType}
+                setCreateType={setCreateType}
                 setIsEditing={setIsEditing}
               />
             )}
@@ -75,7 +75,7 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setIsCreatingType, se
                 type="messaging" 
                 isCreating={isCreating}
                 setIsCreating={setIsCreating} 
-                setIsCreatingType={setIsCreatingType}
+                setCreateType={setCreateType}
                 setIsEditing={setIsEditing}
             />
           )}
