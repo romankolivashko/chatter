@@ -1,11 +1,10 @@
 import React from 'react'
 
-const CloseCreateChannel = () => {
+export const CloseCreateChannel = () => {
   return (
     <div>
-      
+      CloseCreateChannel
     </div>
   )
 }
 
-export default CloseCreateChannel
