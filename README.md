@@ -34,9 +34,12 @@ https://getstream.io/chat/docs/sdk/react/
 * 8:18: picked up from last week, Node Auth and Stream conn good to go
 * 9:09: Stream React UI Components research and implementation
 https://getstream.io/chat/docs/sdk/react/message-components/ui-components/
-* 10:00: Define CSS selectors, best practice -- 
+* 10:00: Defined CSS selectors, best practice -- 
 http://getbem.com/naming/
 https://9elements.com/bem-cheat-sheet/
+* 11:00: Research How to use SVGs in React
+https://blog.logrocket.com/how-to-use-svgs-in-react/
+
 
 Instructor's comments:
 ====================

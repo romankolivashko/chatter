@@ -29,7 +29,7 @@ const CompanyHeader = () => (
   </div>
 );
 
-const ChannelListContainer = () => {
+const ChannelListContainer = ({ isCreating, setIsCreating, setIsCreatingType, setIsEditing }) => {
   const logout = () => {
     cookies.remove("token");
     cookies.remove('userId');
@@ -51,7 +51,16 @@ const ChannelListContainer = () => {
         <ChannelList
           filters={{}}
           channelRenderFilterFn={() => {}}
-          List={(listProps) => <TeamChannelList {...listProps} type="team" />}
+          List={(listProps) => ( 
+            <TeamChannelList 
+                {...listProps} 
+                type="team" 
+                isCreating={isCreating}
+                setIsCreating={setIsCreating} 
+                setIsCreatingType={setIsCreatingType}
+                setIsEditing={setIsEditing}
+              />
+            )}
           Preview={(previewProps) => (
             <TeamChannelPreview {...previewProps} type="team" />
           )}
@@ -61,7 +70,14 @@ const ChannelListContainer = () => {
           filters={{}}
           channelRenderFilterFn={() => {}}
           List={(listProps) => (
-            <TeamChannelList {...listProps} type="messaging" />
+            <TeamChannelList 
+              {...listProps} 
+                type="messaging" 
+                isCreating={isCreating}
+                setIsCreating={setIsCreating} 
+                setIsCreatingType={setIsCreatingType}
+                setIsEditing={setIsEditing}
+            />
           )}
           Preview={(previewProps) => (
             <TeamChannelPreview {...previewProps} type="messaging" />
