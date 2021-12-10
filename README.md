@@ -41,6 +41,8 @@ https://9elements.com/bem-cheat-sheet/
 https://blog.logrocket.com/how-to-use-svgs-in-react/
 * 12:25: Implementing Chat UI Creation based on official Stream docs
 https://getstream.io/chat/docs/
+* 14:00: Implementing Chat Channels UI per Stream docs
+https://getstream.io/chat/docs/
 
 
 Instructor's comments:
