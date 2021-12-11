@@ -44,7 +44,8 @@ const ChannelListContent = ({
   setIsEditing,
   setToggleContainer,
 }) => {
-  const { client } = useChatContext();
+
+  const {client} =useChatContext();
 
   const logout = () => {
     cookies.remove("token");
@@ -80,7 +81,11 @@ const ChannelListContent = ({
             />
           )}
           Preview={(previewProps) => (
-            <TeamChannelPreview {...previewProps} type="team" />
+            <TeamChannelPreview {...previewProps} 
+            setIsCreating={setIsCreating}
+            setIsEditing={setIsEditing}
+            setToggleContainer={setToggleContainer}
+            type="team" />
           )}
         />
 
@@ -98,7 +103,11 @@ const ChannelListContent = ({
             />
           )}
           Preview={(previewProps) => (
-            <TeamChannelPreview {...previewProps} type="messaging" />
+            <TeamChannelPreview {...previewProps} 
+            setIsCreating={setIsCreating}
+            setIsEditing={setIsEditing}
+            setToggleContainer={setToggleContainer}
+            type="messaging" />
           )}
         />
       </div>
@@ -138,7 +147,7 @@ const ChannelListContainer = ({
           setToggleContainer((prevToggleContainer) => !prevToggleContainer)
         }
       ></div>
-
+      {/* responsive version */}
       <ChannelListContent
         // isCreating={isCreating}
         setIsCreating={setIsCreating}
