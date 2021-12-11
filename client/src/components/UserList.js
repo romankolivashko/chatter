@@ -19,11 +19,10 @@ const UserItem = ({ user }) => {
   return (
     <div className="user-item__wrapper">
       <div className="user-item__name-wrapper">
-
-        {/* <Avatar image={user} name={user.fullName || user.id} size={32} />  */}
-
-        <Avatar />
+        <Avatar image={user.image} name={user.fullName || user.id} size={32} /> 
+        <p className="user-item__name">{user.fullName || user.id}</p>
       </div>
+      <InviteIcon />
     </div>
 
   )
@@ -67,7 +66,7 @@ const UserList = () => {
     <ListContainer>
       {loading ? <div className="user-list__message">Loading users ...</div> :(
         users?.map((user, i) => (
-            <UserItem />
+            <UserItem index={i} key={user.id} user={user} />
         ))
       )}
       UserList
