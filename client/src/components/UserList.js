@@ -34,13 +34,13 @@ const UserItem = ({ user, setSelectedUsers }) => {
         <Avatar image={user.image} name={user.fullName || user.id} size={32} /> 
         <p className="user-item__name">{user.fullName || user.id}</p>
       </div>
-      <InviteIcon />
+      {selected ? <InviteIcon /> : <div className="user-item__invite-empty" />}
     </div>
 
   )
 }
 
-const UserList = () => {
+const UserList = (setSelectedUsers) => {
   const { client } = useChatContext();
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -78,7 +78,7 @@ const UserList = () => {
     <ListContainer>
       {loading ? <div className="user-list__message">Loading users ...</div> :(
         users?.map((user, i) => (
-            <UserItem index={i} key={user.id} user={user} />
+            <UserItem index={i} key={user.id} user={user} setSelectedUsers={setSelectedUsers} />
         ))
       )}
       UserList
