@@ -148,13 +148,13 @@ const ChannelListContainer = ({
         }
       ></div>
       {/* responsive version */}
-      <ChannelListContent
+      {/* <ChannelListContent
         // isCreating={isCreating}
         setIsCreating={setIsCreating}
         setCreateType={setCreateType}
         setIsEditing={setIsEditing}
         setToggleContainer={setToggleContainer}
-      />
+      /> */}
     </>
   );
 };
