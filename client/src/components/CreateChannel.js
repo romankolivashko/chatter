@@ -4,8 +4,8 @@ import { UserList } from '.';
 import { CloseCreateChannel } from '../assets/CloseCreateChannel';
 
 
-const ChannelNameInput = () => {
-  const [channelName, setChannelName] = useState('')
+const ChannelNameInput = ({ channelName = '', setChannelName }) => {
+  // const [channelName, setChannelName] = useState('')
 
   const handleChange = ( e ) => {
     e.preventDefault();

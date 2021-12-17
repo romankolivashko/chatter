@@ -42,7 +42,7 @@ const App = () => {
   if(!authToken) return <Auth />
 
   return (
-    <div className="app-wrapper">
+    <div className="app__wrapper">
       <Chat client={client} theme="team light">
         <ChannelListContainer
           isCreating={isCreating}
