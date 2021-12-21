@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #b5dfcb;
-  --primary-color-alpha: #005fff1a;
+  /* --primary-color: #264E58!important; */
+  --primary-color: #C3A9FF!important;
+  --primary-color-alpha: #5f5a4a;
 }
 
 html,
