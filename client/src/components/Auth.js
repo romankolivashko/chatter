@@ -59,7 +59,7 @@ const Auth = () => {
 
   return (
     <div className="auth__form-container">
-      <div className="auth__form-container_fields">
+      <div className="auth__form-container_fields"> 
         <div className="auth__form-container_fields-content">
           <p>{isSignup ? "Sign Up" : "Sign In"}</p>
           <form onSubmit={handleSubmit}>
@@ -147,7 +147,7 @@ const Auth = () => {
       </div>
       <div className="auth__form-container_image">
         <img src={signInImage} alt="sign in" />
-      </div>
+      </div> 
     </div>
   );
 };
