@@ -29,7 +29,7 @@ const CompanyHeader = () => (
     {/* <div>
     <img src={ KatLogo } alt="katlogo" width="150" />
     </div> */}
-    <p className="channel-list__header__text">KatChat</p>
+    <p className="channel-list__header__text">KatChat Inc.</p>
   </div>
 );
 
