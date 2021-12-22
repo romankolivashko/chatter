@@ -199,6 +199,10 @@ body {
   box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 4px 0px;
 }
 
+.str-chat {
+  height: fit-content!important;
+}
+
 .str-chat-channel-list {
   height: fit-content;
   margin-bottom: 8px;
