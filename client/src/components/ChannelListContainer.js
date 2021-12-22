@@ -5,6 +5,7 @@ import Cookies from "universal-cookie";
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "./";
 import LogoIcon from "../assets/logo.png";
 import LogOutIcon from "../assets/logout.png";
+// import KatLogo from "../assets/katlogo.png";
 
 const cookies = new Cookies();
 
@@ -25,6 +26,9 @@ const SideBar = ({ logout }) => (
 
 const CompanyHeader = () => (
   <div className="channel-list__header">
+    {/* <div>
+    <img src={ KatLogo } alt="katlogo" width="150" />
+    </div> */}
     <p className="channel-list__header__text">KatChat</p>
   </div>
 );
