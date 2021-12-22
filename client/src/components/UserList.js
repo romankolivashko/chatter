@@ -109,7 +109,6 @@ const UserList = ({ setSelectedUsers }) => {
           />
         ))
       )}
-      UserList
     </ListContainer>
   );
 };

@@ -453,7 +453,7 @@ background-size: cover;
   font-family: Helvetica Neue, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 28px;
   color: #ffffff;
 }
@@ -591,6 +591,7 @@ background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100%;
+
 }
 
 .create-channel__header {
@@ -661,7 +662,7 @@ background-size: cover;
   align-items: center;
   justify-content: flex-end;
   border-bottom-right-radius: 16px;
-
+  background-color: transparent;
   padding: 0px 10px;
 }
 
