@@ -721,7 +721,8 @@ body {
 }
 
 .user-item__wrapper:hover {
-  background: #f7f6f8;
+  /* background: #f7f6f8; */
+  background: #e9e9ea4d;
   cursor: pointer;
 }
 
@@ -1303,7 +1304,8 @@ ul.str-chat__simple-reactions-list:hover {
 }
 
 .pinned-message {
-  background: #e6efff;
+  /* background: #e6efff; */
+  background: #e9e9ea4d;
 }
 
 .unpinned-message {
