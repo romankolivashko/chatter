@@ -1,5 +1,5 @@
 
-# Real-time messaging App
+# Real-time Messaging App
 <html>
 <!-- Project Shields -->
     <p align="left">
@@ -25,17 +25,10 @@
     </p> 
 </html>
 
-
-### Quick look <a name = "quick_look"></a>
-
-## Authentication 
-![](./auth_chat.gif)
-
-## Core chat features
-![](./chat.gif)
-
 ## Table of Contents
 + [About](#about)
++ [Quick Look](#quick-look)
++ [React Componets Diagram](#diagram)
 + [Decisions made](#decisions)
 + [Prerequisites](#prerequisites)
 + [Resources and Tools](#resources)
@@ -47,6 +40,18 @@
 ## About <a name = "about"></a>
 The application is built with Node.js and React. Users can authenticate, create custom messaging channels, send direct messges to one another.
 Message transport is handled by 3rd party API service - getstream.io, which provides very robust chat feature set.
+
+
+### Quick look <a name = "quick_look"></a>
+
+## Authentication 
+![](./auth_chat.gif)
+
+## Core chat features
+![](./chat.gif)
+
+## React Components Diagram <a name="diagram"></a>
+![](./chat_diagram.png)
 
 ## Decisions made <a name="decisions"></a>
 ### One of the crucial decisions was to use built-in chat message rendering features. Some of the feature-rich messaging options have been sourced from the API service provider. Features offered by getstream.io:
