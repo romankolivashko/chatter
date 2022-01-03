@@ -1,65 +1,112 @@
-### Here is my project idea:
-Probably beat to death, but I’m very interested in implementation of a chat messaging app.
-The message transport will be handled by external messaging API (integration of which is the area of interest). 
-As MVP, users should be able to send and receive text messages.
-The app will be built with React.
-Have not decided on db flavor yet, but will most likely have a database to store historical data and to store user auth data. 
-To build upon, nice styling and extra messaging functionality could be a stretch goal.
+
+# Real-time messaging App
+<html>
+<!-- Project Shields -->
+    <p align="left">
+        <a href="https://github.com/romankolivashko/chatter">
+            <img src="https://img.shields.io/github/repo-size/romankolivashko/chatter?style=plastic">
+        </a>
+	¨
+        <a href="https://github.com/romankolivashko/chatter/commits/main">
+            <img src="https://img.shields.io/github/last-commit/romankolivashko/chatter?color=yellow&style=plastic">
+	</a>	
+        ¨
+        <a href="https://github.com/romankolivashko/chatter/stargazers">
+            <img src="https://img.shields.io/github/stars/romankolivashko/chatter?color=yellow&style=plastic">
+        </a>
+        ¨
+        <a href="https://github.com/romankolivashko/chatter/issues">
+           <img src="https://img.shields.io/github/issues/romankolivashko/chatter?color=yellow&style=plastic">
+        </a>
+        ¨
+        <a href="https://linkedin.com/in/rkolivashko">
+            <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=2867B2">
+        </a>
+    </p> 
+</html>
 
 
+### Quick look <a name = "quick_look"></a>
 
-### Research & Planning Log
-#### Friday, 12/03
-* 8:20: prioritize to-dos
-* 8:40: research messaging communication stacks
-* 10:00: Research Socket.io for real time communiction - https://www.youtube.com/watch?v=BAZ-tJOYhlA
+## Authentication 
+![](./auth_chat.gif)
 
-* 11:00 : Research real time chat app projects- with Socket.io, Node.js
-https://www.youtube.com/watch?v=NU-HfZY3ATQ
+## Core chat features
+![](./chat.gif)
 
-* 12:00: Setting up rough POC 
+## Table of Contents
++ [About](#about)
++ [Decisions made](#decisions)
++ [Prerequisites](#prerequisites)
++ [Resources and Tools](#resources)
++ [Getting Started](#getting_started)
++ [Quick Look](#quick_look)
++ [Stretch Goals](#stretch)
++ [Web-hosted](#hosted)
 
-* 13:00: Look into FB Messanger clone project
-https://www.youtube.com/watch?v=KB7JEnfc7Dc
+## About <a name = "about"></a>
+The application is built with Node.js and React. Users can authenticate, create custom messaging channels, send direct messges to one another.
+Message transport is handled by 3rd party API service - getstream.io, which provides very robust chat feature set.
 
-* 14:30: Node.js Authentication and MongoDB research
-https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+## Decisions made <a name="decisions"></a>
+### One of the crucial decisions was to use built-in chat message rendering features. Some of the feature-rich messaging options have been sourced from the API service provider. Features offered by getstream.io:
+* Typing indicators: Show when the user is typing
+* URL previews: Show an image, text-description or video when adding a URL in a chat message
+* User presence: Show who is online
+* Reactions & Threads: Support modern messaging best practices such as reactions and threads
+* Unread counts: Show the number of unread messages that need attention
+* Offline storage: Keep the chat working, even if the network connection is unstable
 
-* 15:00: Research Stream Chat API
-https://getstream.io/chat/docs/sdk/react/
+Additionally, getstream.io service offered generous API call volume limit, while Heroku and Netlify provided free-tier services.
 
-* 16:00: MongoDB research for Auth
+### Prerequisites<a name = "prerequisites"></a>
 
-#### Friday, 12/10
-* 8:18: picked up from last week, Node Auth and Stream conn good to go
-* 9:09: Stream React UI Components research and implementation
-https://getstream.io/chat/docs/sdk/react/message-components/ui-components/
-* 10:00: Defined CSS selectors, best practice -- 
-http://getbem.com/naming/
-https://9elements.com/bem-cheat-sheet/
-* 11:00: Research How to use SVGs in React
-https://blog.logrocket.com/how-to-use-svgs-in-react/
-* 12:25: Implementing Chat UI Creation based on official Stream docs
-https://getstream.io/chat/docs/
-* 14:00: Implementing Chat Channels UI per Stream docs
-https://getstream.io/chat/docs/
+* Web Browser
+* Node.js
+* NPM
+* Webpack
+* Create server/.env file with following entries, all can be obtained from `https://getstream.io/chat/trial/` 
+```
+STREAM_APP_ID=<your_app_id>
+STREAM_API_KEY=<your_api_key>
+STREAM_API_SECRET=<your_api_secret>
+```
 
+### Resources and tools<a name = "resources"></a>
+* https://nodejs.org/en/
+* https://reactjs.org/
+* https://getstream.io/
+* https://app.diagrams.net/
+* https://www.svgbackgrounds.com/
+* https://www.netlify.com/
+* https://heroku.com/
 
-Instructor's comments:
-====================
-1.	React vs React Native?
-o	I see that you said you'd be building it with React, but you also mention being able to receive and send text messages 
-o	React Native is basically the mobile-friendly version of React, which may be the direction you want to go
-o	Are you potentially needing to also look at other languages, such as Swift or Kotlin, since this may be a mobile-directed app?
-o	If you're just going to send/receive messages in a proprietary format (the app itself handles communication), then it will probably be easier. 
-2.	User authentication and authorization
-o	Make sure that you store this information securely.
-o	If phone numbers are part of the user information, I'd be careful to look at any potential laws pertaining to storing that information, if there are any, for account creation. 
-3.	Databases
-o	I'd say you may want to plan this out first, if it's part of the MVP. 
-o	I'd consider what sort of information you're hoping to store here. Will it be a relational database type? NoSQL? 
-o	Also, consider security concerns here. Chats can be very private. Do you also want to include images? There are some ethical things to consider there too. 
-4.	MVP and stretch goals 
-o	I'd like to see you be more specific on extra messaging functionality/stretch goals. 
-o	I think styling is a great stretch goal in general. If it's being built in React.js, check out Semantic-UI or any other React style library to get ideas! :) 
-o	I think your MVP has the potential to go either way - quickly or slowly. It's better to have more ideas for your stretch goals if you end up needing some more things to do :) 
+## Getting Started <a name = "getting_started"></a>
+Use a command line/Bash to move to the project directory with cd project-directory-here
+
+1. Clone the repository: $ `git clone https://github.com/romankolivashko/chatter.git`
+2. Navigate to the chatter/server directory on your computer
+3. Run `npm install` in command line/Bash to get all dependencies.
+4. Run `npm run dev` in command line/Bash to start up the Node.js server in your browser.
+5. Navigate to the chatter/client directory on your computer
+6. Run `npm install` in command line/Bash to get all dependencies.
+7. Run `npm run start` in command line/Bash to start up the client in your browser.
+
+### Stretch Goald<a name = "stretch"></a>
+* Give users an option to reset passwords
+* Improve CSS styling
+* Currently not responsive, with that either React Native or Flutter seem to be a viable option
+* Enable users receive SMS notifications when not online
+
+### Hosted online <a name = "hosted"></a>
+[Link](https://katchatify.netlify.app/)
+
+## Known Bugs
+
+[Issues](https://github.com/romankolivashko/chatter/issues)
+
+## License
+MIT
+
+## Contact Information
+rkolivashko@gmail.com
